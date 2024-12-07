@@ -23,7 +23,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="presupuesto" class="form-label">Presupuesto</label>
-                        <input type="number" class="form-control" id="presupuesto" required>
+                        <input type="number" class="form-control" id="presupuesto" >
                     </div>
                     <button type="submit" class="btn btn-primary">Añadir Viaje</button>
                 </form>
@@ -114,7 +114,7 @@
                     loadViajes();
                     addViajeForm.reset();  // Limpiar formulario
                 })
-                .catch(error => console.error('Error al añadir viaje:', error));
+                .catch(error => alert(error.response.data));
         });
 
         // Función para añadir un equipamiento
